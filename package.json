@@ -1,0 +1,25 @@
+{
+  "name": "tagali",
+  "version": "1.0.0",
+  "description": "Tagali - Cross-Platform Video SEO Tags & Social Hashtag Optimizer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "vite build",
+    "start": "node server.js",
+    "preview": "vite preview",
+    "lint": "node -c server.js && node -c src/app.js && node -c src/seoEngine.js && node -c src/data/samplePrompts.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "tailwindcss": "^4.1.14",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21"
+  }
+}

@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tagali - Video SEO Tags & Social Hashtag Generator</title>
+    <link rel="icon" type="image/jpeg" href="./logo.jpg" />
+    <meta name="description" content="Cross-platform video SEO tags, hashtags, and keyword generator for YouTube, TikTok, Instagram, and Facebook for improved discoverability and search ranking." />
+    <meta property="og:title" content="Tagali - Video SEO Tags & Social Hashtag Generator" />
+    <meta property="og:description" content="Cross-platform video SEO tags, hashtags, and keyword generator for YouTube, TikTok, Instagram, and Facebook for improved discoverability and search ranking." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body class="bg-[#090d16] text-slate-100 antialiased font-['Plus_Jakarta_Sans',sans-serif] min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+    
+    <!-- Top Navigation Header -->
+    <header class="border-b border-slate-800/80 bg-[#0d131f]/90 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
+        
+        <!-- Brand & Logo -->
+        <div class="flex items-center gap-3.5">
+          <div class="relative w-10 h-10 rounded-2xl overflow-hidden shadow-lg shadow-indigo-950/50 border border-indigo-500/40 bg-slate-900 flex items-center justify-center shrink-0">
+            <img src="./logo.jpg" alt="Tagali Logo" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
+                Tagali
+              </span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
+                SEO 2026
+              </span>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">
+              Cross-Platform Video SEO & Social Tag Optimizer
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Live Engine Ready Status -->
+          <div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-semibold text-slate-300 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Algorithm Ready</span>
+          </div>
+
+          <!-- History Modal Button -->
+          <button
+            type="button"
+            id="history-btn"
+            class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-xs font-semibold text-slate-200 transition-all cursor-pointer shadow-sm"
+          >
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>History</span>
+            <span
+              id="history-count-badge"
+              class="hidden px-1.5 py-0.2 text-[10px] font-bold rounded-full bg-indigo-500 text-white"
+            >0</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-8">
+
+      <!-- Hero Introduction Banner -->
+      <section class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/50 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4">
+          <svg class="w-3.5 h-3.5 text-indigo-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          Algorithm-Trained Video Metadata & Keyword Intelligence
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4 leading-tight">
+          Supercharge Your Video Discoverability & Ranking
+        </h1>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Generate <strong class="text-indigo-400 font-semibold">20 high-ranking YouTube video tags</strong>, viral TikTok hashtags, Explore-tier Instagram sets, and Facebook discovery keywords tailored to 2026 social algorithms.
+        </p>
+
+        <!-- Platform Brand Logo Badges -->
+        <div class="flex items-center justify-center gap-2.5 mt-5 flex-wrap">
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-200 shadow-sm hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/>
+              <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFFFFF"/>
+            </svg>
+            <span>YouTube</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-200 shadow-sm hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#00F2FE"/>
+              <path d="M16.69 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-.896v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FE2C55"/>
+              <path d="M17.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-2.545v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FFFFFF"/>
+            </svg>
+            <span>TikTok</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-200 shadow-sm hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="heroIgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fa7e1e"/>
+                  <stop offset="25%" stop-color="#f44336"/>
+                  <stop offset="50%" stop-color="#e91e63"/>
+                  <stop offset="75%" stop-color="#9c27b0"/>
+                  <stop offset="100%" stop-color="#4a148c"/>
+                </linearGradient>
+              </defs>
+              <rect width="24" height="24" rx="6" fill="url(#heroIgGrad)"/>
+              <path d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4zm5.7-7.4a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0zM17.8 4.2H6.2A4.2 4.2 0 0 0 2 8.4v7.4a4.2 4.2 0 0 0 4.2 4.2h11.6a4.2 4.2 0 0 0 4.2-4.2V8.4a4.2 4.2 0 0 0-4.2-4.2zm2.4 11.6a2.4 2.4 0 0 1-2.4 2.4H6.2a2.4 2.4 0 0 1-2.4-2.4V8.4a2.4 2.4 0 0 1 2.4-2.4h11.6a2.4 2.4 0 0 1 2.4 2.4v7.4z" fill="#ffffff"/>
+            </svg>
+            <span>Instagram</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-200 shadow-sm hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+              <path d="M15.12 12.63l.4-2.61h-2.51V8.33c0-.72.35-1.42 1.48-1.42h1.15V4.69c-.7-.09-1.42-.14-2.13-.14-2.17 0-3.59 1.32-3.59 3.69v1.78H7.13v2.61h2.29V19.5c.46.07.93.11 1.4.11s.94-.04 1.4-.11v-6.87h2.9z" fill="#FFFFFF"/>
+            </svg>
+            <span>Facebook</span>
+          </div>
+        </div>
+
+        <!-- 3-Step Process Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 mt-8 text-left">
+          <div class="p-4 rounded-2xl bg-[#0f172a] border border-slate-800 flex items-start gap-3 shadow-md shadow-slate-950/40">
+            <span class="w-7 h-7 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 font-bold text-xs flex items-center justify-center shrink-0">1</span>
+            <div>
+              <h3 class="text-xs font-bold text-white uppercase tracking-wider">Enter Video Concept</h3>
+              <p class="text-xs text-slate-400 mt-0.5">Describe your video topic, draft title, or key talking points.</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#0f172a] border border-slate-800 flex items-start gap-3 shadow-md shadow-slate-950/40">
+            <span class="w-7 h-7 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 font-bold text-xs flex items-center justify-center shrink-0">2</span>
+            <div>
+              <h3 class="text-xs font-bold text-white uppercase tracking-wider">Select Platform & Tone</h3>
+              <p class="text-xs text-slate-400 mt-0.5">Customize format, content niche, and algorithmic hook style.</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#0f172a] border border-slate-800 flex items-start gap-3 shadow-md shadow-slate-950/40">
+            <span class="w-7 h-7 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-bold text-xs flex items-center justify-center shrink-0">3</span>
+            <div>
+              <h3 class="text-xs font-bold text-white uppercase tracking-wider">Get 20 Ranked Tags</h3>
+              <p class="text-xs text-slate-400 mt-0.5">1-click copy comma-separated tag sets directly to video box.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Generator Prompt Card Form -->
+      <section class="bg-[#0f172a] border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl mb-12 relative overflow-hidden">
+        
+        <!-- Subtle Glow Background -->
+        <div class="absolute -top-24 -right-24 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <form id="generator-form" onsubmit="return false;" class="space-y-6 relative z-10">
+          
+          <!-- Topic Input Header -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="video-prompt" class="text-sm font-bold text-slate-200 flex items-center gap-2">
+                <span>Video Topic / Concept</span>
+                <span class="text-xs text-slate-400 font-normal">(Be as specific as possible)</span>
+              </label>
+              <div class="flex items-center gap-3">
+                <span id="char-counter" class="text-xs text-slate-400 font-mono">0 chars</span>
+                <button
+                  type="button"
+                  id="clear-prompt-btn"
+                  class="text-xs text-slate-400 hover:text-white transition-colors cursor-pointer"
+                >Clear</button>
+              </div>
+            </div>
+
+            <textarea
+              id="video-prompt"
+              rows="3"
+              placeholder="e.g. 10-minute morning skincare routine for glass skin using gentle Korean serums and SPF"
+              class="w-full bg-[#090d16] border border-slate-800 rounded-2xl p-4 text-sm sm:text-base text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-y"
+            >Morning skincare routine for glass skin</textarea>
+          </div>
+
+          <!-- Quick Sample Prompt Chips -->
+          <div>
+            <div class="flex items-center gap-1.5 text-xs text-slate-400 mb-2 font-medium">
+              <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <span>Sample Ideas (Click to load):</span>
+            </div>
+            <div id="sample-chips-container" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Platform Selector Tabs -->
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-2 uppercase tracking-wider">
+              Target Platform Focus
+            </label>
+            <div id="platform-tabs" class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+              <button
+                type="button"
+                data-platform="all"
+                class="platform-pill text-xs font-semibold py-2.5 px-3 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4 shrink-0 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                  <path stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span>All Platforms</span>
+              </button>
+              <button
+                type="button"
+                data-platform="youtube"
+                class="platform-pill text-xs font-semibold py-2.5 px-3 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/>
+                  <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFFFFF"/>
+                </svg>
+                <span>YouTube</span>
+              </button>
+              <button
+                type="button"
+                data-platform="tiktok"
+                class="platform-pill text-xs font-semibold py-2.5 px-3 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#00F2FE"/>
+                  <path d="M16.69 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-.896v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FE2C55"/>
+                  <path d="M17.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-2.545v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FFFFFF"/>
+                </svg>
+                <span>TikTok</span>
+              </button>
+              <button
+                type="button"
+                data-platform="instagram"
+                class="platform-pill text-xs font-semibold py-2.5 px-3 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="igPillGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#fa7e1e"/>
+                      <stop offset="25%" stop-color="#f44336"/>
+                      <stop offset="50%" stop-color="#e91e63"/>
+                      <stop offset="75%" stop-color="#9c27b0"/>
+                      <stop offset="100%" stop-color="#4a148c"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="24" height="24" rx="6" fill="url(#igPillGrad)"/>
+                  <path d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4zm5.7-7.4a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0zM17.8 4.2H6.2A4.2 4.2 0 0 0 2 8.4v7.4a4.2 4.2 0 0 0 4.2 4.2h11.6a4.2 4.2 0 0 0 4.2-4.2V8.4a4.2 4.2 0 0 0-4.2-4.2zm2.4 11.6a2.4 2.4 0 0 1-2.4 2.4H6.2a2.4 2.4 0 0 1-2.4-2.4V8.4a2.4 2.4 0 0 1 2.4-2.4h11.6a2.4 2.4 0 0 1 2.4 2.4v7.4z" fill="#ffffff"/>
+                </svg>
+                <span>Instagram</span>
+              </button>
+              <button
+                type="button"
+                data-platform="facebook"
+                class="platform-pill text-xs font-semibold py-2.5 px-3 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                  <path d="M15.12 12.63l.4-2.61h-2.51V8.33c0-.72.35-1.42 1.48-1.42h1.15V4.69c-.7-.09-1.42-.14-2.13-.14-2.17 0-3.59 1.32-3.59 3.69v1.78H7.13v2.61h2.29V19.5c.46.07.93.11 1.4.11s.94-.04 1.4-.11v-6.87h2.9z" fill="#FFFFFF"/>
+                </svg>
+                <span>Facebook</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Configuration Dropdowns (Niche, Format, Tone) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label for="niche-select" class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">
+                Content Niche
+              </label>
+              <select
+                id="niche-select"
+                class="w-full bg-[#090d16] border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 cursor-pointer"
+              ></select>
+            </div>
+
+            <div>
+              <label for="format-select" class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">
+                Video Format
+              </label>
+              <select
+                id="format-select"
+                class="w-full bg-[#090d16] border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 cursor-pointer"
+              ></select>
+            </div>
+
+            <div>
+              <label for="tone-select" class="block text-xs font-bold text-slate-300 mb-1.5 uppercase tracking-wider">
+                Tone & Hook Style
+              </label>
+              <select
+                id="tone-select"
+                class="w-full bg-[#090d16] border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 cursor-pointer"
+              ></select>
+            </div>
+          </div>
+
+          <!-- Action Button -->
+          <button
+            type="button"
+            id="generate-btn"
+            class="w-full py-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-extrabold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2.5 shadow-xl shadow-indigo-600/25 transition-all cursor-pointer glow-btn"
+          >
+            <!-- Spinner -->
+            <svg id="generate-btn-spinner" class="w-5 h-5 animate-spin hidden text-white" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <!-- Lightning icon -->
+            <svg class="w-5 h-5 text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+            <span id="generate-btn-text">Generate SEO Tags & Metadata</span>
+          </button>
+
+        </form>
+      </section>
+
+      <!-- Results Display Section -->
+      <section id="results-container" class="space-y-8 hidden animate-fade-in">
+        
+        <!-- 1. Executive Summary & Discoverability Score Card -->
+        <div class="bg-[#0f172a] border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+            
+            <!-- Left: Strategy Summary -->
+            <div class="lg:col-span-2 space-y-2.5">
+              <div class="flex items-center gap-2">
+                <span class="text-xs uppercase font-extrabold px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">
+                  SEO Strategy Blueprint
+                </span>
+                <span class="text-xs text-slate-400">• Updated For 2026 Algorithms</span>
+              </div>
+              <h2 id="summary-topic" class="text-xl sm:text-2xl font-extrabold text-white">
+                Video Topic Analysis
+              </h2>
+              <p id="summary-text" class="text-sm text-slate-300 leading-relaxed">
+                Loading algorithm distribution...
+              </p>
+            </div>
+
+            <!-- Right: Discoverability Score Widget -->
+            <div class="p-5 rounded-2xl bg-[#0c121e] border border-slate-800/80 flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-slate-300 uppercase">Discoverability Score</span>
+                <span id="score-quality-label" class="text-xs font-bold text-indigo-400">Excellent</span>
+              </div>
+              
+              <div class="flex items-baseline gap-2 mb-4">
+                <span id="discoverability-score-value" class="text-4xl font-extrabold text-white">94</span>
+                <span class="text-sm font-semibold text-slate-400">/ 100</span>
+              </div>
+
+              <!-- 4-Stat Metric Breakdown -->
+              <div class="space-y-2 text-xs">
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Search Intent Match</span>
+                    <span id="score-intent" class="font-bold text-indigo-300">96%</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="bar-intent" class="h-full bg-indigo-500 rounded-full" style="width: 96%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Algorithm Alignment</span>
+                    <span id="score-algorithm" class="font-bold text-sky-300">94%</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="bar-algorithm" class="h-full bg-sky-400 rounded-full" style="width: 94%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Trend Relevance</span>
+                    <span id="score-trend" class="font-bold text-cyan-300">91%</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="bar-trend" class="h-full bg-cyan-400 rounded-full" style="width: 91%"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex justify-between text-slate-300 mb-1">
+                    <span>Competition Balance</span>
+                    <span id="score-comp" class="font-bold text-emerald-300">95%</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                    <div id="bar-comp" class="h-full bg-emerald-400 rounded-full" style="width: 95%"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. Platform Subtabs Bar -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none border-b border-slate-800">
+          <button
+            type="button"
+            data-subtab="youtube"
+            class="result-subtab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          >
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/>
+              <path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFFFFF"/>
+            </svg>
+            <span>YouTube (20 Tags)</span>
+          </button>
+          <button
+            type="button"
+            data-subtab="tiktok"
+            class="result-subtab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          >
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#00F2FE"/>
+              <path d="M16.69 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-.896v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FE2C55"/>
+              <path d="M17.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-2.545v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FFFFFF"/>
+            </svg>
+            <span>TikTok FYP</span>
+          </button>
+          <button
+            type="button"
+            data-subtab="instagram"
+            class="result-subtab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          >
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="igSubtabGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fa7e1e"/>
+                  <stop offset="25%" stop-color="#f44336"/>
+                  <stop offset="50%" stop-color="#e91e63"/>
+                  <stop offset="75%" stop-color="#9c27b0"/>
+                  <stop offset="100%" stop-color="#4a148c"/>
+                </linearGradient>
+              </defs>
+              <rect width="24" height="24" rx="6" fill="url(#igSubtabGrad)"/>
+              <path d="M12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 7.2a2.7 2.7 0 1 1 0-5.4 2.7 2.7 0 0 1 0 5.4zm5.7-7.4a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0zM17.8 4.2H6.2A4.2 4.2 0 0 0 2 8.4v7.4a4.2 4.2 0 0 0 4.2 4.2h11.6a4.2 4.2 0 0 0 4.2-4.2V8.4a4.2 4.2 0 0 0-4.2-4.2zm2.4 11.6a2.4 2.4 0 0 1-2.4 2.4H6.2a2.4 2.4 0 0 1-2.4-2.4V8.4a2.4 2.4 0 0 1 2.4-2.4h11.6a2.4 2.4 0 0 1 2.4 2.4v7.4z" fill="#ffffff"/>
+            </svg>
+            <span>Instagram Reels</span>
+          </button>
+          <button
+            type="button"
+            data-subtab="facebook"
+            class="result-subtab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          >
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+              <path d="M15.12 12.63l.4-2.61h-2.51V8.33c0-.72.35-1.42 1.48-1.42h1.15V4.69c-.7-.09-1.42-.14-2.13-.14-2.17 0-3.59 1.32-3.59 3.69v1.78H7.13v2.61h2.29V19.5c.46.07.93.11 1.4.11s.94-.04 1.4-.11v-6.87h2.9z" fill="#FFFFFF"/>
+            </svg>
+            <span>Facebook Watch</span>
+          </button>
+          <button
+            type="button"
+            data-subtab="export"
+            class="result-subtab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer whitespace-nowrap"
+          >
+            <svg class="w-4 h-4 shrink-0 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Export & Share</span>
+          </button>
+        </div>
+
+        <!-- TAB CONTENT: YOUTUBE -->
+        <div id="tab-content-youtube" class="space-y-6">
+          
+          <!-- YouTube Video Tag Box -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-start justify-between flex-wrap gap-4 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base sm:text-lg flex items-center gap-2">
+                    <span>1. YouTube Video Tag Box</span>
+                    <span id="yt-tag-count-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-mono">
+                      20 / 20 Tags
+                    </span>
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Click any tag to copy individually, or use Copy All to paste directly into YouTube's 500-character tag box.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Top Copy & Batch Buttons -->
+              <div class="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  id="generate-yt-batch-btn"
+                  class="flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-xl text-xs border border-slate-700 transition-all cursor-pointer"
+                >
+                  <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                  <span id="generate-yt-batch-text">Generate 20 New Tags (Batch #2)</span>
+                </button>
+
+                <button
+                  type="button"
+                  id="copy-yt-tags-btn"
+                  class="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold rounded-xl text-xs shadow-md shadow-red-600/20 transition-all cursor-pointer"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                  <span>Copy All 20 Tags</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- YouTube 500 Char Counter Progress Bar -->
+            <div class="mb-4 p-3 rounded-xl bg-[#0c121e] border border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-slate-400">Tag Box Character Limit:</span>
+                <span id="yt-char-count-text" class="text-xs font-mono font-bold text-slate-200">0 / 500 chars</span>
+              </div>
+              <div class="w-full sm:w-48 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div id="yt-char-progress-bar" class="h-1.5 rounded-full transition-all duration-300 bg-indigo-500" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <!-- Search Filter & Add Custom Tag Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+              <input
+                type="text"
+                id="tag-filter-input"
+                placeholder="Filter current tags..."
+                class="w-full bg-[#090d16] border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+              />
+              <form id="add-tag-form" class="flex gap-2">
+                <input
+                  type="text"
+                  id="add-tag-input"
+                  placeholder="Add custom tag..."
+                  class="flex-1 bg-[#090d16] border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                />
+                <button
+                  type="submit"
+                  class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-indigo-600 hover:text-white text-slate-200 text-xs font-bold transition-all cursor-pointer border border-slate-700/60"
+                >
+                  Add
+                </button>
+              </form>
+            </div>
+
+            <!-- Grid of Tag Pills -->
+            <div id="yt-tags-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2.5">
+              <!-- Dynamically populated tags -->
+            </div>
+          </div>
+
+          <!-- YouTube CTR Titles -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1 flex items-center gap-2">
+              <span>2. High-CTR Title Formulas</span>
+              <span class="text-xs text-slate-400 font-normal">(Tested for high impression click-through rate)</span>
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Choose from curiosity-driven, problem-solving, and listicle title formats.
+            </p>
+            <div id="yt-titles-container" class="space-y-2.5">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Target Keywords Matrix -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl overflow-x-auto">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              3. Target Keywords Matrix
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">
+              High search volume and low-to-medium competition search queries to target in your script and titles.
+            </p>
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-[11px] uppercase tracking-wider text-slate-400">
+                  <th class="py-2.5 px-4">Keyword</th>
+                  <th class="py-2.5 px-4">Search Volume</th>
+                  <th class="py-2.5 px-4">Competition</th>
+                  <th class="py-2.5 px-4">Keyword Type</th>
+                </tr>
+              </thead>
+              <tbody id="yt-keywords-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Optimized Description Template -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base sm:text-lg">
+                  4. Optimized Description Snippet
+                </h3>
+                <p class="text-xs text-slate-400">
+                  Includes natural keyword distribution and timestamp placeholders
+                </p>
+              </div>
+              <button
+                type="button"
+                id="copy-yt-desc-btn"
+                class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-indigo-600 hover:text-white text-slate-200 text-xs font-bold rounded-xl transition-all cursor-pointer border border-slate-700/60"
+              >
+                Copy Description
+              </button>
+            </div>
+            <textarea
+              id="yt-description-snippet"
+              rows="6"
+              readonly
+              class="w-full bg-[#090d16] border border-slate-800 rounded-xl p-3.5 text-xs text-slate-200 font-mono focus:outline-none"
+            ></textarea>
+            <div class="mt-3 flex items-center gap-2 text-xs text-slate-400">
+              <span>Recommended YouTube Category:</span>
+              <span id="yt-category-pill" class="px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-bold border border-indigo-500/30">
+                General Content
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB CONTENT: TIKTOK -->
+        <div id="tab-content-tiktok" class="space-y-6 hidden">
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-black border border-cyan-500/40 flex items-center justify-center shrink-0 shadow-md shadow-cyan-500/10">
+                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#00F2FE"/>
+                    <path d="M16.69 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-.896v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FE2C55"/>
+                    <path d="M17.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-2.545v13.672a2.896 2.896 0 0 1-2.891 2.891 2.896 2.896 0 0 1-2.891-2.89 2.896 2.896 0 0 1 2.891-2.892c.38 0 .744.075 1.08.213V9.432a6.34 6.34 0 0 0-1.08-.093 6.345 6.345 0 0 0-6.336 6.337 6.345 6.345 0 0 0 6.336 6.336 6.345 6.345 0 0 0 6.336-6.336V8.452a8.214 8.214 0 0 0 4.97 1.674V6.686z" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base sm:text-lg">
+                    TikTok FYP & Algorithm Hashtags
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Segmented by viral weight to trigger the For You Page recommendation feed.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="copy-tiktok-hashtags-btn"
+                class="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-slate-950 font-bold rounded-xl text-xs transition-all cursor-pointer"
+              >
+                Copy All Hashtags
+              </button>
+            </div>
+
+            <!-- Categories Grid -->
+            <div id="tiktok-hashtag-categories" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- TikTok Search Bar Queries -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              TikTok Search Bar Queries
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Queries viewers type into TikTok search; speak these aloud or include in video text overlay.
+            </p>
+            <div id="tiktok-search-queries" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- 3-Second Retention Hooks -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              Viral Retention Hooks (First 3 Seconds)
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Hook viewers before they scroll to maximize completion rate and push to more feeds.
+            </p>
+            <div id="tiktok-hooks-container" class="space-y-3">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Trending Sound Keywords -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              Audio & Sound Vibes
+            </h3>
+            <p class="text-xs text-slate-400 mb-3">
+              Pair your video with trending audio in these styles for maximum algorithmic reach.
+            </p>
+            <div id="tiktok-sounds-container" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: INSTAGRAM -->
+        <div id="tab-content-instagram" class="space-y-6 hidden">
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] flex items-center justify-center shrink-0 shadow-md shadow-pink-500/20">
+                  <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#FFFFFF" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4.5" stroke="#FFFFFF" stroke-width="2"/>
+                    <circle cx="18" cy="6" r="1.2" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base sm:text-lg">
+                    Instagram Reels Hashtag Bundle
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Tiered 3-part hashtag pyramid optimized for Explore Page push.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="copy-ig-hashtags-btn"
+                class="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold rounded-xl text-xs transition-all cursor-pointer"
+              >
+                Copy All Instagram Tags
+              </button>
+            </div>
+
+            <!-- Tiers Grid -->
+            <div id="ig-hashtag-tiers" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Semantic Explore Keywords -->
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <h3 class="font-bold text-white text-base sm:text-lg mb-1">
+              Semantic Explore Keywords
+            </h3>
+            <p class="text-xs text-slate-400 mb-3">
+              Keywords to weave into captions and on-screen text for Instagram's recommendation engine.
+            </p>
+            <div id="ig-explore-keywords" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Alt-Text & Caption Hook -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 shadow-xl">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-pink-400 uppercase">Accessibility Alt-Text SEO</span>
+                <button
+                  type="button"
+                  id="copy-ig-alt-btn"
+                  class="text-xs text-pink-400 hover:text-pink-300 cursor-pointer"
+                >Copy</button>
+              </div>
+              <p id="ig-alt-text" class="text-xs text-slate-200 leading-relaxed font-mono bg-[#090d16] p-3 rounded-xl border border-slate-800">
+                Alt text loading...
+              </p>
+            </div>
+
+            <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 shadow-xl">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-pink-400 uppercase">Caption Hook & CTA</span>
+                <button
+                  type="button"
+                  id="copy-ig-hook-btn"
+                  class="text-xs text-pink-400 hover:text-pink-300 cursor-pointer"
+                >Copy</button>
+              </div>
+              <p id="ig-caption-hook" class="text-xs text-slate-200 leading-relaxed bg-[#090d16] p-3 rounded-xl border border-slate-800">
+                Caption hook loading...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: FACEBOOK -->
+        <div id="tab-content-facebook" class="space-y-6 hidden">
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#1877F2]/20 border border-[#1877F2]/40 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                    <path d="M15.12 12.63l.4-2.61h-2.51V8.33c0-.72.35-1.42 1.48-1.42h1.15V4.69c-.7-.09-1.42-.14-2.13-.14-2.17 0-3.59 1.32-3.59 3.69v1.78H7.13v2.61h2.29V19.5c.46.07.93.11 1.4.11s.94-.04 1.4-.11v-6.87h2.9z" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base sm:text-lg">
+                    Facebook Watch & Reels Tags
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-0.5">
+                    Meta topic tags to target audiences across Facebook Feed & Watch.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="copy-fb-tags-btn"
+                class="flex items-center gap-1.5 px-4 py-2 bg-[#1877f2] hover:bg-blue-600 text-white font-bold rounded-xl text-xs transition-all cursor-pointer"
+              >
+                Copy All Facebook Tags
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-2">Topic Tags</span>
+                <div id="fb-topic-tags" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-blue-400 uppercase tracking-wider block mb-2">Hashtags</span>
+                <div id="fb-hashtags" class="flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Facebook Video Title & Discoverability -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 shadow-xl">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-blue-400 uppercase">Suggested Video Title</span>
+                <button
+                  type="button"
+                  id="copy-fb-title-btn"
+                  class="text-xs text-blue-400 hover:text-blue-300 cursor-pointer"
+                >Copy</button>
+              </div>
+              <p id="fb-video-title" class="text-xs text-slate-100 font-semibold bg-[#090d16] p-3 rounded-xl border border-slate-800">
+                Title loading...
+              </p>
+            </div>
+
+            <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 shadow-xl">
+              <span class="text-xs font-bold text-blue-400 uppercase block mb-2">Search Terms for Meta Search</span>
+              <div id="fb-discoverability-kw" class="flex flex-wrap gap-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB CONTENT: EXPORT & SHARE -->
+        <div id="tab-content-export" class="space-y-6 hidden">
+          <div class="bg-[#0f172a] border border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xl">
+            <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+              <div>
+                <h3 class="font-bold text-white text-base sm:text-lg">
+                  📥 Export & Share SEO Report
+                </h3>
+                <p class="text-xs text-slate-400 mt-0.5">
+                  Save your complete keyword strategy, tags, and formulas for your production team.
+                </p>
+              </div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  id="download-report-btn"
+                  class="flex items-center gap-1.5 px-3.5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl text-xs transition-all cursor-pointer shadow-md shadow-indigo-600/25"
+                >
+                  Download Report (.txt)
+                </button>
+                <button
+                  type="button"
+                  id="copy-bundle-btn"
+                  class="flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-xl text-xs border border-slate-700 transition-all cursor-pointer"
+                >
+                  Copy Bundle
+                </button>
+                <button
+                  type="button"
+                  id="copy-json-btn"
+                  class="flex items-center gap-1.5 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-xl text-xs border border-slate-700 transition-all cursor-pointer"
+                >
+                  Copy JSON
+                </button>
+              </div>
+            </div>
+
+            <textarea
+              id="export-raw-preview"
+              rows="12"
+              readonly
+              class="w-full bg-[#090d16] border border-slate-800 rounded-xl p-4 text-xs text-slate-200 font-mono focus:outline-none resize-y"
+            ></textarea>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-[#0d131f] py-8 text-center text-xs text-slate-400 mt-12">
+      <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-white">Tagali</span>
+          <span>• Cross-Platform Video SEO Tags & Social Hashtag Optimizer</span>
+        </div>
+        <p>Built for modern creators, YouTubers, and social video publishers.</p>
+      </div>
+    </footer>
+
+    <!-- History Drawer / Modal -->
+    <div
+      id="history-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in"
+    >
+      <div class="bg-[#0f172a] border border-slate-800 rounded-3xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="p-5 sm:p-6 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base sm:text-lg">
+                Generated Video SEO History
+              </h3>
+              <p id="history-modal-subtitle" class="text-xs text-slate-400">
+                0 saved video keyword & tag reports
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              id="clear-history-btn"
+              class="text-xs text-red-400 hover:text-red-300 p-2 rounded-lg hover:bg-red-950/40 transition-colors flex items-center gap-1 cursor-pointer"
+            >
+              Clear All
+            </button>
+            <button
+              type="button"
+              id="close-history-btn"
+              class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- History Items List -->
+        <div id="history-list" class="flex-1 overflow-y-auto p-5 sm:p-6 space-y-3">
+          <!-- Dynamically populated -->
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div
+      id="toast-notification"
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-900 text-white font-bold text-xs shadow-2xl shadow-indigo-500/25 border border-indigo-500/50 pointer-events-none"
+    >
+      <svg class="w-4 h-4 text-indigo-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+      <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Pure JavaScript Entry Point -->
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
